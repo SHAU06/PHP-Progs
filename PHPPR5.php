@@ -21,10 +21,9 @@
 		{
 			$res=$res*$bs;
 		}
-			if($res!=0)
-			{
+		// $bs**$p->exponential operator
 				echo "<b>Value of $bs raise to $p =".$res."</b>";
-			}
+			
 		}
 	raise($bs,$p);
 ?>	</form>
