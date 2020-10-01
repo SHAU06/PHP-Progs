@@ -1,58 +1,47 @@
+//Write a Program to show the use of following operators used in PHP : Arithmatic, Logical, Comparison, Relational.
 <!DOCTYPE html>
 <html>
-<head><title>Calculator</title></head>
+<head>
+	<title>Operator-2</title>
+	<style type="text/css">
+		body{ font-family: verdana; }
+	</style>
+</head>
 <body>
-<center><h1>CALCULATOR</h1><br>
-<font color="red" size="4">For Logical Operations Please Enter Values in <b>0</b> and <b>1</b> format.</font><br><br>
-	<form method="POST" ><br>
-			<label for="n1">Enter NO.1</label>&nbsp;&nbsp;&nbsp;
-			<input type="text" name="n1"><br><br>
-			<label for="n2">Enter NO.2</label>&nbsp;&nbsp;&nbsp;
-			<input type="text" name="n2"><br><br>
-			<LABEL><b>Arithmatic Operations</b></LABEL><br>
-			<input type="submit" name="submit" value="+">
-			<input type="submit" name="submit" value="-">
-			<input type="submit" name="submit" value="*">
-			<input type="submit" name="submit" value="/">
-			<input type="submit" name="submit" value="%"><br><br>
-			<LABEL><b>Logical Operations</b></LABEL><br>
-			<input type="submit" name="submit" value="&&">
-			<input type="submit" name="submit" value="||">
-			<input type="submit" name="submit" value="!">
-			<input type="submit" name="submit" value="XOR"><br><br>
-			<LABEL><b>Relational Operations</b></LABEL><br>
-			<input type="submit" name="submit" value=">">
-			<input type="submit" name="submit" value="<">
-			<input type="submit" name="submit" value=">=">
-			<input type="submit" name="submit" value="<=">
-			<input type="submit" name="submit" value="==">
-			<input type="submit" name="submit" value="!=">
+<center>
+	<form action="#" method="POST" autocomplete="off">
+	<label style="color: red;"><br><b>Practical No. 1</b><br></label>
+<label style="color: brown;"><br><br><b>Q. Write a Program to show the use of following operators used in PHP : Arithmatic, Logical, Comparison, Relational  </b><br><br></label>
+<label><br><b>CALCULATOR</b><br><br></label><label style="color: red;">NOTE : For Logical Operator Please use value in the form of 0 and 1.</label><br><br>
+<label for="no1">Enter No.1 : <br></label><input type="text" name="no1"><label for="no2"><br><br>Enter No.2 : <br> </label><input type="text" name="no2">
+		<br><br>
+		<label>Arithmatic Operators  : <br><br></label>
+		<input type="submit" name="submit" value="+">
+		<input type="submit" name="submit" value="-">
+		<input type="submit" name="submit" value="*">
+		<input type="submit" name="submit" value="/">
+		<input type="submit" name="submit" value="%">
+		<label><br><br>Logical Operators  : <br><br></label>
+		<input type="submit" name="submit" value="&&">
+		<input type="submit" name="submit" value="||">
+		<input type="submit" name="submit" value="!">
+		<input type="submit" name="submit" value="^">
+		<LABEL><br><br>Relational Operations : <br><br></LABEL>
+		<input type="submit" name="submit" value=">">
+		<input type="submit" name="submit" value="<">
+		<input type="submit" name="submit" value=">=">
+		<input type="submit" name="submit" value="<=">
+		<input type="submit" name="submit" value="==">
+		<input type="submit" name="submit" value="!=">
+		<br><br>
 		</form>
-<?php
-	$a=(int)$_POST['n1'];
-	$b=(int)$_POST['n2'];
-	$s=$_POST['submit'];
-
-	      var_dump($s);
-	      var_dump($a);
-	      var_dump($b);
-
-   
-      $res=($s=="+"?$a+$b:"");
-      echo $res?"<center><br><br><b>Addition is $res </b></center>":"";
-      $res=($s=="-"?$a-$b:"");
-     echo $res?"<center><br><br><b>Subtraction is $res </b></center>":"";
-      $res=($s=="*"?$a*$b:"");
-      echo $res?"<center><br><br><b>Multiplication is $res </b></center>":"";
-      $res=($s=="/"?$a/$b:"");
-     echo $res?"<center><br><br><b>Division is $res </b></center>":"";
-      $res=($s=="%"?$a%$b:"");
-      echo $res?"<center><br><br>Reminder is $res </b></center>":"";
- 
- echo $s=="&&"?$a && $b?"<center><br><br><b>Condition is true</b></center":"<center><b>Condition is false</b></center>":$s=="||"?($a||$b)?"<b>Condition is true</b>":"<b>Condition is false</b>":$s=="!"?!($a==$b)?"<b>Condition is true</b>":"<b>Condition is false</b>":$s=="XOR"?($a XOR $b)?"<b>Condition is true</b>":"<b>Condition is false</b>":"";
-
- echo $s==">"?$a>$b?"<b><br><br>$a is Greater than $b</b>":"<b>$a is not Greater than $b</b>":"";
- ech $s=="<"?$a<$b?"<b>$a is Lesser than $b</b>":"<b>$a is not Lesser than $b</b>":"";
- // $s=="<"?$a<$b?"<b>$a is Lesser than $b</b>":"<b>$a is not Lesser than $b</b>":"";
- // $s==">="?$a>=$b?"<b>$a is Greater than and Equals to $b</b>":"<b>$a is not Equal or Greater than $b</b>":$s=="<="?$a<=$b?"<b>$a is Lesser than or Equals to $b</b>":"<b>$a is not Lesser or Equal than $b</b>":$s=="=="?$a==$b?"<b>Both No. are Equal </b>":"<b>Both No. are Different</b>":$s=="!="?$a!=$b?"<b>Both No. are Different</b>":"<b>Both No. are Equal</b>":"";
-?></center> </body> </html>
+			<?php  $a= $_POST['no1'];
+			$b= $_POST['no2'];
+			$c= $_POST['submit'];
+echo "<b>Ans : ";($c=='+')?var_dump($a+$b): ($c=='-')?var_dump($a-$b): ($c=='*')?var_dump($a*$b): ($c=='/')?var_dump($a/$b): ($c=="%")?var_dump($a%$b): ("");
+echo $c=='&&'? var_dump($a&&$b) : $c=='||'? var_dump($a||$b): $c=='!'? var_dump(!$a>$b): $c=='^'? var_dump($a XOR $b): "";
+echo $c=='>'? $a>$b?"$a is greater than $b":"$a is not greater than $b": $c=='<'? $a<$b? "$a is less than $b":"$a is not less than $b": $c=='>='? $a>=$b? "$a is Greater than and Equals to $b":"$a is not Equal or Greater than $b":$c=='<='? $a<=$b? "$a is Lesser than or Equals to $b":"$a is not Lesser or Equal than $b": $c=='=='? $a==$b? "$a and $b both number are Equal":"$a and $b both number are Different":$c=='!='? $a!=$b? "$a and $b both number are Different":"$a and $b both number are Equal ":  "</b>";
+			?>
+</center>
+</body>
+</html>
